@@ -9,7 +9,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-
 /**
  *
  * @author Juan Carlos
@@ -21,10 +20,10 @@ public class DMSS15 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        EntityManagerFactory emf=Persistence.createEntityManagerFactory("DMSS15PU");
-        EntityManager em=emf.createEntityManager();
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("DMSS15PU");
+        EntityManager em = emf.createEntityManager();
         em.close();
     }
-    
+
 }
