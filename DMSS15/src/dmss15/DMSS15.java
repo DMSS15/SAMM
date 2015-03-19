@@ -11,7 +11,11 @@ import javax.persistence.Persistence;
 
 /**
  *
- * @author Juan Carlos
+ * @author Juan Carlos Alcaide Gómez
+ * @author 
+ * @author 
+ * @author 
+ * @author 
  */
 public class DMSS15 {
 
