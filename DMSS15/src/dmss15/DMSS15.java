@@ -12,7 +12,7 @@ import javax.persistence.Persistence;
 /**
  *
  * @author Juan Carlos Alcaide Gómez
- * @author 
+ * @author María González Moreno
  * @author 
  * @author 
  * @author 
