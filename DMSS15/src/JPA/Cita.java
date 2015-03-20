@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author Juan Carlos
+ * @author Juan Carlos Alcaide
  */
 @Entity
 public class Cita implements Serializable {

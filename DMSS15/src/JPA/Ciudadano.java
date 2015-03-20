@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 /**
  *
- * @author Juan Carlos Alcaide Gómez
+ * @author Juan Carlos Alcaide
  */
 @Entity
 public class Ciudadano implements Serializable {
