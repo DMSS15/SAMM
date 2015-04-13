@@ -26,6 +26,7 @@ public class Usuario implements Serializable{
     private int codigo;
     private String dni;
     private String password;
+    private String centro;
     private String nombre;
     private String apellidos;
     private String sexo;
@@ -78,6 +79,14 @@ public class Usuario implements Serializable{
 
     public void setMovil(String movil) {
         this.movil = movil;
+    }
+
+    public void setCentro(String centro) {
+        this.centro = centro;
+    }
+
+    public String getCentro() {
+        return centro;
     }
 
     public static long getSerialVersionUID() {
