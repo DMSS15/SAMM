@@ -43,10 +43,15 @@ public class Ciudadano extends Usuario {
     private List<Administrativo> administativoAciudadano;
     
     //Relacion uno a muchos entre ciudadano y demandas
-    @OneToMany (mappedBy="ciudadanos")
+    @OneToMany (mappedBy="ciudadano")
     private List<Demanda> demandas;
     
+    //Relacion de uno a muchos entre ciudadano y citas
+    @OneToMany (mappedBy = "ciudadano")
+    private List<Cita> citas;
     
+    //relacion unos a muchos reflexiva entre ciudadanos y ciudadanos
+    @OneToMany (mappedBy = "ciudadano")
     private List<Ciudadano> ciudadano;
     @ManyToOne
     private Ciudadano ciud;
