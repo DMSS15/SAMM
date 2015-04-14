@@ -35,11 +35,13 @@ public class Ciudadano extends Usuario {
     public void setOcupacion(String ocupacion) {
         this.ocupacion = ocupacion;
     }
+    //Relacion muchos a muchos ciudadano con administrativo
     @ManyToMany
     @JoinTable(name = "ciu_advo",
             joinColumns = @JoinColumn(name = "administrativo_fk"),
             inverseJoinColumns = @JoinColumn(name= "ciudadano_fk"))
-    private List<Intervencion> administativoAciudadano;
+    private List<Administrativo> administativoAciudadano;
+    
     @OneToMany (mappedBy="ciudadanos")
     private List<Demanda> demandas;
     private List<Ciudadano> ciudadano;

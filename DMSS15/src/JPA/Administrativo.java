@@ -63,6 +63,6 @@ public class Administrativo extends Usuario {
         return "Administrativo{" + "despacho=" + despacho + '}';
     }
     @ManyToMany (mappedBy="administativoAciudadano")
-    private List<Intervencion> administrativoPORciudadano;
+    private List<Ciudadano> administrativoPORciudadano;
     
 }
