@@ -6,10 +6,16 @@
 package JPA;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -29,5 +35,14 @@ public class Ciudadano extends Usuario {
     public void setOcupacion(String ocupacion) {
         this.ocupacion = ocupacion;
     }
-    
+    @ManyToMany
+    @JoinTable(name = "ciu_advo",
+            joinColumns = @JoinColumn(name = "administrativo_fk"),
+            inverseJoinColumns = @JoinColumn(name= "ciudadano_fk"))
+    private List<Intervencion> administativoAciudadano;
+    @OneToMany (mappedBy="ciudadanos")
+    private List<Demanda> demandas;
+    private List<Ciudadano> ciudadano;
+    @ManyToOne
+    private Ciudadano ciud;
 }

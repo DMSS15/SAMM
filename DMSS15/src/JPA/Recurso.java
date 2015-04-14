@@ -6,10 +6,14 @@
 package JPA;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -22,7 +26,7 @@ public class Recurso implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int tipo;
+    private Integer tipo;
     private String descripcion;
 
     public static long getSerialVersionUID() {
@@ -49,6 +53,10 @@ public class Recurso implements Serializable{
     public String toString() {
         return "Recurso{" + "tipo=" + tipo + ", descripcion=" + descripcion + '}';
     }
-    
+    @ManyToMany
+    @JoinTable(name = "rec_int",
+            joinColumns = @JoinColumn(name = "recursos_fk"),
+            inverseJoinColumns = @JoinColumn(name= "intervencion_fk"))
+    private List<Intervencion> recursoAintervencion;
     
 }

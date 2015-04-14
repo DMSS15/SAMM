@@ -5,11 +5,15 @@
  */
 package JPA;
 
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -58,6 +62,7 @@ public class Administrativo extends Usuario {
     public String toString() {
         return "Administrativo{" + "despacho=" + despacho + '}';
     }
-    
+    @ManyToMany (mappedBy="administativoAciudadano")
+    private List<Intervencion> administrativoPORciudadano;
     
 }
