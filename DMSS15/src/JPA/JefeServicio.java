@@ -6,11 +6,13 @@
 package JPA;
 
 import java.sql.Date;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -23,11 +25,14 @@ public class JefeServicio extends Usuario{
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String despacho;
+    private String especialidad;
+    
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 
+    
     public void setDespacho(String despacho) {
         this.despacho = despacho;
     }
@@ -36,6 +41,10 @@ public class JefeServicio extends Usuario{
         return despacho;
     }
 
+    public String getEspecialidad() {
+        return especialidad;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -63,5 +72,9 @@ public class JefeServicio extends Usuario{
         return "JefeServicio{" + "despacho=" + despacho + '}';
     }
     
+    //Relación de Uno a Mucho
+    
+    @OneToMany (mappedBy="Tecnico")
+    private List<Tecnico> tecnicos;
     
 }

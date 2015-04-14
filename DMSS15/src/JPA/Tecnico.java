@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -20,13 +21,22 @@ public class Tecnico extends Usuario{
    
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String especialidad;
+    private Integer despacho;
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
 
+    public void setDespacho(Integer despacho) {
+        this.despacho = despacho;
+    }
+
     public String getEspecialidad() {
         return especialidad;
+    }
+
+    public Integer getDespacho() {
+        return despacho;
     }
 
     @Override
@@ -34,5 +44,6 @@ public class Tecnico extends Usuario{
         return "Tecnico{" + "especialidad=" + especialidad + '}';
     }
     
-    
+    @ManyToOne
+    private JefeServicio jefeservicio;
 }
