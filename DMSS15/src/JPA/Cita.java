@@ -24,7 +24,7 @@ public class Cita implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long codigo;
+    private Integer codigo;
     
     @Temporal(TemporalType.DATE)
     private Date fecha;
@@ -33,11 +33,11 @@ public class Cita implements Serializable {
     
     //Faltan relaciones centro y municipio
 
-    public Long getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Long codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 

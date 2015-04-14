@@ -25,18 +25,18 @@ public class Demanda implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long codigo;
+    private Integer codigo;
     
     @Temporal(TemporalType.DATE)
     private Date fechaIni,fechaFin;
     
     private String titulo, estado, descripcion;
 
-    public Long getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Long codigo) {
+    public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
 
