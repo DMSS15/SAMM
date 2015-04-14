@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -90,5 +91,8 @@ public class Expediente implements Serializable {
         return "Expediente{" + "codigo=" + codigo + ", estado=" + estado + ", fechainicio=" + fechainicio + ", descripcion=" + descripcion + '}';
     }
     
-    
+     //------Relaciones------
+    //Relacion 1 a muchos entre ciudadano y expedientes
+    @ManyToOne
+    private Ciudadano ciudadano;
 }

@@ -52,7 +52,11 @@ public class Ciudadano extends Usuario {
     
     //relacion unos a muchos reflexiva entre ciudadanos y ciudadanos
     @OneToMany (mappedBy = "ciudadano")
-    private List<Ciudadano> ciudadano;
+    private List<Ciudadano> familiares;
     @ManyToOne
-    private Ciudadano ciud;
+    private Ciudadano ciudadano;
+    
+    //relacion uno a muchos entre ciudadano y expediente
+    @OneToMany (mappedBy = "ciudadano")
+    private List<Expediente> expedientes;
 }
