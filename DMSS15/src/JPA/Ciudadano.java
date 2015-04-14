@@ -42,8 +42,11 @@ public class Ciudadano extends Usuario {
             inverseJoinColumns = @JoinColumn(name= "ciudadano_fk"))
     private List<Administrativo> administativoAciudadano;
     
+    //Relacion uno a muchos entre ciudadano y demandas
     @OneToMany (mappedBy="ciudadanos")
     private List<Demanda> demandas;
+    
+    
     private List<Ciudadano> ciudadano;
     @ManyToOne
     private Ciudadano ciud;

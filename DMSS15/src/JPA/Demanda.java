@@ -107,6 +107,8 @@ public class Demanda implements Serializable {
         return "Demanda{" + "codigo=" + codigo + ", titulo=" + titulo + ", estado=" + estado + ", descripcion=" + descripcion + '}';
     }
     
+    //------Relaciones------
+    //Relacion 1 a muchos entre ciudadano y demandas
     @ManyToOne
     private Ciudadano Ciudadano;
 
