@@ -5,6 +5,7 @@
  */
 package JPA;
 
+import java.io.Serializable;
 import java.sql.Date;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
