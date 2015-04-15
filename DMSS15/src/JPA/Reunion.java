@@ -11,8 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
@@ -28,7 +26,6 @@ public class Reunion implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer codigoReunion;
-    @Temporal(TemporalType.DATE)
     private Date fecha;
     private String tema;
     private String descripcion;
