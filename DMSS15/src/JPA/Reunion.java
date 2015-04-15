@@ -6,7 +6,6 @@
 package JPA;
 
 import java.io.Serializable;
-import java.sql.Time;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,6 +13,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import java.util.List;
 
 /**
  *
@@ -29,9 +32,8 @@ public class Reunion implements Serializable {
     private Date fecha;
     private String tema;
     private String descripcion;
-    @Temporal(TemporalType.TIME)
-    private Time horaInicio;
-    private Time horaFin;
+    private String horaInicio;
+    private String horaFin;
         
     //getters y setters
     
