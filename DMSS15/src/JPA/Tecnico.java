@@ -46,4 +46,8 @@ public class Tecnico extends Usuario{
     
     @ManyToOne
     private JefeServicio jefeservicio;
+    //Relación muchos a muchos Tecnico con Reunión
+    @ManyToMany (mappedBy="tecnicoAreunion")
+    private List<Ciudadano> tecnicoESTAreunion;
+    
 }
