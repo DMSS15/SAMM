@@ -11,6 +11,8 @@ import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 /**
@@ -108,6 +110,16 @@ public class Intervencion implements Serializable{
     }
     
     
-    @ManyToMany (mappedBy="recursoAintervencion")
+     @ManyToMany (mappedBy="recursoAintervencion")
     private List<Recurso> usadoPORintervencion;
+     
+    @ManyToMany (mappedBy="tecnicoAintervencion")
+    private List<Recurso> usadoPORtecnico;
+    
+    @ManyToMany
+    @JoinTable(name = "int_exp",
+            joinColumns = @JoinColumn(name = "intervencion_fk"),
+            inverseJoinColumns = @JoinColumn(name= "expediente_fk"))
+    private List<Intervencion> intervencionAexpediente;
+
 }
