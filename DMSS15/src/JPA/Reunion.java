@@ -72,6 +72,6 @@ public class Reunion implements Serializable {
     @JoinTable(name = "reu_tec",
             joinColumns = @JoinColumn(name = "tecnico_fk"),
             inverseJoinColumns = @JoinColumn(name= "reunion_fk"))
-    private List<Administrativo> tecnicoAreunion;
+    private List<Administrativo> tecnicoESTAreunion;
     
 }
