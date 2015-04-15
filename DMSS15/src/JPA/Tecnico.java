@@ -11,6 +11,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 /**
@@ -54,5 +56,19 @@ public class Tecnico extends Usuario{
     //relacion uno a muchos entre Tecnico y Baja
     @OneToMany (mappedBy = "baja")
     private List<Baja> baja;
+    
+    
+    @ManyToMany
+    @JoinTable(name = "tec_int",
+            joinColumns = @JoinColumn(name = "tecnico_fk"),
+            inverseJoinColumns = @JoinColumn(name= "intervencion_fk"))
+    private List<Intervencion> tecnicoAintervencion;
+    @ManyToMany
+    @JoinTable(name = "tec_exp",
+            joinColumns = @JoinColumn(name = "tecnico_fk"),
+            inverseJoinColumns = @JoinColumn(name= "expediente_fk"))
+    private List<Intervencion> tecnicoAexpediente;
+
+
     
 }
