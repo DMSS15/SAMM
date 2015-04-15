@@ -46,8 +46,11 @@ public class Tecnico extends Usuario{
     
     @ManyToOne
     private JefeServicio jefeservicio;
-    //Relación muchos a muchos Tecnico con Reunión
+    //Relación muchos a muchos entre Tecnico y Reunión
     @ManyToMany (mappedBy="tecnicoAreunion")
     private List<Ciudadano> tecnicoESTAreunion;
+    //relacion uno a muchos entre Tecnico y Baja
+    @OneToMany (mappedBy = "baja")
+    private List<Baja> baja;
     
 }
