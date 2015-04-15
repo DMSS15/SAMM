@@ -40,7 +40,31 @@ public class Baja implements Serializable {
     public void setCodigoBaja(Long codigoBaja) {
         this.codigoBaja = codigoBaja;
     }
+    
+     public Date getFechaInicio() {
+        return fechaInicio;
+    }
 
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+     public Date getFechaFin() {
+        return fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+    
+    public String getMotivo() {
+        return motivo;
+    }
+
+    public void setMotivo(String motivo) {
+        this.motivo = motivo;
+    }
+    
     @Override
     public int hashCode() {
         int hash = 0;
