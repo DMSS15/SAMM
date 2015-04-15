@@ -110,7 +110,7 @@ public class Intervencion implements Serializable{
     }
     
     
-     @ManyToMany (mappedBy="recursoAintervencion")
+     @ManyToMany (mappedBy= "recursoAintervencion")
     private List<Recurso> usadoPORintervencion;
      
     @ManyToMany (mappedBy="tecnicoAintervencion")
