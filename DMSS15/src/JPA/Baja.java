@@ -65,5 +65,7 @@ public class Baja implements Serializable {
     public String toString() {
         return "JPA.Baja[ id=" + codigoBaja + " ]";
     }
-    
+    //Relacion Muchos a uno entre Baja y Tecnico
+    @ManyToOne
+    private Baja baja;
 }
