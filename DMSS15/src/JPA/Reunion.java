@@ -6,7 +6,7 @@
 package JPA;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -27,21 +27,21 @@ public class Reunion implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long codigoReunion;
+    private Integer codigoReunion;
     @Temporal(TemporalType.DATE)
     private Date fecha;
     private String tema;
     private String descripcion;
-    private String horaInicio;
-    private String horaFin;
+    private Date horaInicio;
+    private Date horaFin;
         
     //getters y setters
     
-    public Long getCodigoReunion() {
+    public Integer getCodigoReunion() {
         return codigoReunion;
     }
 
-    public void setCodigoReunion(Long codigoReunion) {
+    public void setCodigoReunion(Integer codigoReunion) {
         this.codigoReunion = codigoReunion;
     }
     
@@ -69,19 +69,19 @@ public class Reunion implements Serializable {
         this.descripcion = descripcion;
     }
 
-    public String getHoraInicio() {
+    public Date getHoraInicio() {
         return horaInicio;
     }
 
-    public void setHoraInicio(String horaInicio) {
+    public void setHoraInicio(Date horaInicio) {
         this.horaInicio = horaInicio;
     }
     
-    public String getHoraFin() {
+    public Date getHoraFin() {
         return horaFin;
     }
 
-    public void setHoraFin(String horaFin) {
+    public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
     }
 
