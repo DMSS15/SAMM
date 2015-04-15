@@ -62,7 +62,10 @@ public class Administrativo extends Usuario {
     public String toString() {
         return "Administrativo{" + "despacho=" + despacho + '}';
     }
+    //Relación muchos a muchos de Tecnico-Reunión
     @ManyToMany (mappedBy="administativoAciudadano")
     private List<Ciudadano> administrativoPORciudadano;
+    //Relación uno a muchos de Tecnico-Baja
+    
     
 }
