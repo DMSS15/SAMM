@@ -17,7 +17,7 @@ import javax.persistence.ManyToOne;
 
 /**
  *
- * @author Diego Fernández Godoy
+ * @author Diego Fernández 
  */
 @Entity
 public class Baja implements Serializable {
