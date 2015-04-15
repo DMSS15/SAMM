@@ -6,15 +6,13 @@
 package JPA;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
  *
@@ -27,7 +25,6 @@ public class Demanda implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer codigo;
     
-    @Temporal(TemporalType.DATE)
     private Date fechaIni,fechaFin;
     
     private String titulo, estado, descripcion;
