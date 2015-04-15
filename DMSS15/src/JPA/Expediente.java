@@ -7,10 +7,12 @@ package JPA;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 /**
@@ -95,4 +97,13 @@ public class Expediente implements Serializable {
     //Relacion 1 a muchos entre ciudadano y expedientes
     @ManyToOne
     private Ciudadano ciudadano;
+    
+    @ManyToMany (mappedBy="tecnicoAexpediente")
+    private List<Recurso> usadoPORtecnico;
+    
+    @ManyToMany (mappedBy="expedienteAciudadano")
+    private List<Recurso> usadoPORciudadano;
+    
+    @ManyToMany (mappedBy="intervencionAexpediente")
+    private List<Recurso> usadoPORexpediente;
 }
