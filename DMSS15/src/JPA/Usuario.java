@@ -34,9 +34,10 @@ public class Usuario implements Serializable{
     private String direccion;
     private Date nacimiento;
     private String correo;
+    private String telefono;
 
    
-
+    
     public void setDni(String dni) {
         this.dni = dni;
     }
@@ -142,10 +143,20 @@ public class Usuario implements Serializable{
     public int getCodigo() {
         return codigo;
     }
+    
+    public String getTelefono() {
+        return telefono;
+    }
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+    
+    
     
     @Override
     public boolean equals(Object obj) {
