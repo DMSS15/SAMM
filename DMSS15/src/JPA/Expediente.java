@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -95,10 +96,15 @@ public class Expediente implements Serializable {
     
      //------Relaciones------
     //Relacion 1 a muchos entre ciudadano y expedientes
+    @ManyToOne
+    private Ciudadano ciudadano;
     
     @ManyToMany (mappedBy="intervencionAexpediente")
     private List<Recurso> usadoPORexpediente;
     
-    @ManyToOne
-    private Ciudadano ciudadano;
+     //Relacion de uno a muchos entre expediente e intervencion
+    @OneToMany (mappedBy = "expediente")
+    private List<Intervencion> intervencion;
+    
+    
 }

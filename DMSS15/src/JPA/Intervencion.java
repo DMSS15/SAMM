@@ -14,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -121,5 +122,9 @@ public class Intervencion implements Serializable{
             joinColumns = @JoinColumn(name = "intervencion_fk"),
             inverseJoinColumns = @JoinColumn(name= "expediente_fk"))
     private List<Intervencion> intervencionAexpediente;
+    
+    
+    @ManyToOne
+    private Expediente expediente;
 
 }
