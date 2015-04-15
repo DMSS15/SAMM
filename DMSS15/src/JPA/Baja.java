@@ -11,8 +11,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.persistence.ManyToOne;
 
 /**
@@ -24,21 +22,19 @@ public class Baja implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long codigoBaja;
+    private Integer codigoBaja;
     private String motivo;
-    @Temporal(TemporalType.DATE)
     private Date fechaInicio;
-    @Temporal(TemporalType.DATE)
     private Date fechaFin;
     
 
     //getters and setters
     
-    public Long getCodigoBaja() {
+    public Integer getCodigoBaja() {
         return codigoBaja;
     }
 
-    public void setCodigoBaja(Long codigoBaja) {
+    public void setCodigoBaja(Integer codigoBaja) {
         this.codigoBaja = codigoBaja;
     }
     
