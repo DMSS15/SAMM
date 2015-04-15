@@ -20,7 +20,7 @@ import java.util.List;
 
 /**
  *
- * @author Diego Fernández Godoy
+ * @author Diego Fernández Godoy 
  */
 @Entity
 public class Reunion implements Serializable {
