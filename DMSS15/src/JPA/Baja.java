@@ -13,10 +13,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.ManyToOne;
 
 /**
  *
- * @author Diego
+ * @author Diego Fernández Godoy
  */
 @Entity
 public class Baja implements Serializable {
