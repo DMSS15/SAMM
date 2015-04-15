@@ -67,5 +67,11 @@ public class Reunion implements Serializable {
     public String toString() {
         return "JPA.Reunion[ id=" + codigoReunion + " ]";
     }
+    //Relación muchos a muchos Reunión con Tecnicos
+    @ManyToMany
+    @JoinTable(name = "reu_tec",
+            joinColumns = @JoinColumn(name = "tecnico_fk"),
+            inverseJoinColumns = @JoinColumn(name= "reunion_fk"))
+    private List<Administrativo> tecnicoAreunion;
     
 }
