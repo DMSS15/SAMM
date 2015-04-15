@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.List;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -23,13 +24,13 @@ public class Tecnico extends Usuario{
    
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String especialidad;
-    private Integer despacho;
+    private String despacho;
 
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
 
-    public void setDespacho(Integer despacho) {
+    public void setDespacho(String despacho) {
         this.despacho = despacho;
     }
 
@@ -37,7 +38,7 @@ public class Tecnico extends Usuario{
         return especialidad;
     }
 
-    public Integer getDespacho() {
+    public String getDespacho() {
         return despacho;
     }
 
