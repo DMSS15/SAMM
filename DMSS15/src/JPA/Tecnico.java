@@ -50,10 +50,15 @@ public class Tecnico extends Usuario{
     
     @ManyToOne
     private JefeServicio jefeservicio;
+    
+
     //Relación muchos a muchos entre Tecnico y Reunión
+    
     @ManyToMany (mappedBy="tecnicoAreunion")
     private List<Reunion> tecnicoESTAreunion;
+    
     //relacion uno a muchos entre Tecnico y Baja
+    
     @OneToMany (mappedBy = "baja")
     private List<Baja> baja;
     
@@ -63,11 +68,6 @@ public class Tecnico extends Usuario{
             joinColumns = @JoinColumn(name = "tecnico_fk"),
             inverseJoinColumns = @JoinColumn(name= "intervencion_fk"))
     private List<Intervencion> tecnicoAintervencion;
-    @ManyToMany
-    @JoinTable(name = "tec_exp",
-            joinColumns = @JoinColumn(name = "tecnico_fk"),
-            inverseJoinColumns = @JoinColumn(name= "expediente_fk"))
-    private List<Intervencion> tecnicoAexpediente;
 
 
     
