@@ -115,14 +115,7 @@ public class Intervencion implements Serializable{
     private List<Recurso> usadoPORintervencion;
      
     @ManyToMany (mappedBy="tecnicoAintervencion")
-    private List<Recurso> usadoPORtecnico;
-    
-    @ManyToMany
-    @JoinTable(name = "int_exp",
-            joinColumns = @JoinColumn(name = "intervencion_fk"),
-            inverseJoinColumns = @JoinColumn(name= "expediente_fk"))
-    private List<Intervencion> intervencionAexpediente;
-    
+    private List<Recurso> usadoPORtecnico;  
     
     @ManyToOne
     private Expediente expediente;

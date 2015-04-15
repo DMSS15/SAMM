@@ -99,9 +99,6 @@ public class Expediente implements Serializable {
     @ManyToOne
     private Ciudadano ciudadano;
     
-    @ManyToMany (mappedBy="intervencionAexpediente")
-    private List<Recurso> usadoPORexpediente;
-    
      //Relacion de uno a muchos entre expediente e intervencion
     @OneToMany (mappedBy = "expediente")
     private List<Intervencion> intervencion;
