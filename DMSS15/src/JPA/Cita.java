@@ -30,6 +30,8 @@ public class Cita implements Serializable {
     private Date fecha;
     private String hora;
     private Integer duracion;
+    private String centro;
+    private String municipio;
     
     //Faltan relaciones centro y municipio
 
@@ -64,6 +66,24 @@ public class Cita implements Serializable {
     public void setDuracion(Integer duracion) {
         this.duracion = duracion;
     }
+
+    public String getCentro() {
+        return centro;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setCentro(String centro) {
+        this.centro = centro;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+    
+    
     
     //relaciones
     
